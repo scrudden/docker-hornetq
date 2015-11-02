@@ -1,4 +1,3 @@
-# docker-hornetq
 Docker image HornetQ
 ==================
 
