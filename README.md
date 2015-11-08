@@ -42,7 +42,7 @@ systems({
 
 ```
 
-Example of using this image with [azk](http://azk.io):
+Example of using this image with local folder config:
 
 ```js
 /**
