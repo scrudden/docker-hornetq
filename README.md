@@ -42,6 +42,33 @@ systems({
 
 ```
 
+Example of using this image with [azk](http://azk.io):
+
+```js
+/**
+ * Documentation: http://docs.azk.io/Azkfile.js
+ */
+// Adds the systems that shape your system
+systems({
+  hornetq: {
+    // More images:  http://images.azk.io
+    image: {'docker': 'mansante/hornetq'},
+    scalable: false,
+    wait: {'retry': 20, 'timeout': 300},
+    shell: '/bin/bash',
+    command: 'bash ./run.sh /config',
+    mounts: {
+      // copnfig - internal folder on the container
+      // conf/hornetq - local path hornetq configurations 
+      '/config': path("conf/hornetq"),
+    },
+    ports: {
+      jms: '5445:5445/tcp',
+      batch: '5455:5455/tcp',
+    },
+  },
+});
+```
 
 ### Usage with `docker`
 
