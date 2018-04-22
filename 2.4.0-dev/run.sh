@@ -16,7 +16,7 @@ if [ ! -d $CONFIG_DIR ]; then
     exit 1
 fi
 
-HORNETQ_HOST=`ip addr show eth0 | grep -oE '((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])'`;
+HORNETQ_HOST=`ip addr show eth0 | grep -oE '((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])' | head -n 1`;
 if [ a"$HORNETQ_HOST" = a ]; then HORNETQ_HOST=localhost; fi
 
 RESOLVED_CONFIG_DIR=`cd "$CONFIG_DIR"; pwd`
