@@ -6,10 +6,8 @@ Docker image running to [HornetQ](http://hornetq.jboss.org) in Docker and [azk](
 HornetQ versions(tags)
 ---
 
-<versions>
-- [2.4.0.Final](https://github.com/mansante/docker-hornetq/blob/master/2.4.0/Dockerfile) : pure version.
-- [2.4.0-dev](https://github.com/mansante/docker-hornetq/blob/master/2.4.0-dev/Dockerfile) : low memory.
-</versions>
+ * [2.4.0.Final](https://github.com/mansante/docker-hornetq/blob/master/2.4.0/Dockerfile) : pure version.
+ * [2.4.0-dev](https://github.com/mansante/docker-hornetq/blob/master/2.4.0-dev/Dockerfile) : low memory.
 
 
 Image content:
