@@ -9,6 +9,8 @@ RUN mkdir ${HORNETQ_HOME} \
   | tar -zxC ${HORNETQ_HOME} --strip-components=1 \
   && rm -f hornetq-${HORNETQ_VERSION}-bin.tar.gz
 
+ADD hornetq-configuration.xml $HORNETQ_HOME/config/stand-alone/non-clustered/
+
 ADD run.sh $HORNETQ_HOME/bin/
 
 WORKDIR $HORNETQ_HOME/bin
